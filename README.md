@@ -7,13 +7,11 @@ A modern web-based firmware flashing tool for PickTrack devices, built with Web 
 ## 🚀 Features
 
 - **Browser-Based Flashing**: No software installation required - runs directly in your web browser
-- **Automatic Device Detection**: Validates ESP32 compatibility and displays device information
+- **Automatic Device Detection**: Validates device compatibility and displays device information
 - **Real-Time Progress**: Live progress tracking with detailed step-by-step updates
 - **Automatic Reset**: Device automatically restarts after firmware update
 - **Mobile App Integration**: Built-in QR code for easy mobile app download
-- **Professional UI**: Dark theme interface matching the PickTrack brand
 - **Console Logging**: Detailed logging with expandable console for debugging
-- **Safety Features**: Confirmation dialogs and device validation to prevent errors
 
 ## 🔧 Requirements
 
