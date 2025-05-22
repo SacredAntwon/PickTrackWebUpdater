@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PickTrack Web Updater</title>
+    <script>
+        // Redirect to HTTPS if needed
+        if (window.location.hostname !== "localhost" && window.location.protocol === "http:") {
+            window.location.href = "https:" + window.location.href.substring(5);
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <script module>
+        window.esptoolPackage = import(
+            window.location.hostname === "localhost"
+                ? "https://unpkg.com/esp-web-flasher@5.1.4/dist/web/index.js?module"
+                : "https://unpkg.com/esp-web-flasher@5.1.4/dist/web/index.js?module"
+        );
+    </script>
+    <script src="script.js" module defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <img src="assets/logo.png" alt="PickTrack Logo" class="logo">
+            <h1>PickTrack Web Updater</h1>
+        </header>
+
+        <!-- Browser Support Warning -->
+        <div id="notSupported" class="not-supported hidden">
+            <h2>⚠️ Browser Not Supported</h2>
+            <p>Web Serial is not supported in this browser. Please use Chrome, Edge, or another Chromium-based browser with Web Serial enabled.</p>
+        </div>
+
+        <!-- Main Application -->
+        <div id="app" class="app">
+            <!-- Device Connection -->
+            <div class="card">
+                <h2>Device Connection</h2>
+                <div class="device-status">
+                    <div class="status-indicator" id="statusIndicator">
+                        <div class="status-dot disconnected" id="statusDot"></div>
+                        <span id="statusText">Disconnected</span>
+                    </div>
+                    <div class="device-info hidden" id="deviceInfo">
+                        <div class="info-item">
+                            <span class="label">MAC Address:</span>
+                            <span class="value monospace" id="macAddress">-</span>
+                        </div>
+                    </div>
+                </div>
+                <button id="connectBtn" class="btn btn-primary">Connect PickTrack Device</button>
+            </div>
+
+            <!-- Firmware Update -->
+            <div class="card">
+                <h2>Firmware Update</h2>
+                <div class="firmware-info">
+                    <div class="info-item">
+                        <span class="label">Latest Version:</span>
+                        <span class="value monospace" id="latestVersion">v1.0.0</span>
+                    </div>
+                    <div class="update-description" id="changelogContainer">
+                        <div id="changelogContent">
+                            <p>Loading changelog...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button id="flashBtn" class="btn btn-success" disabled>Update Firmware</button>
+                    <button id="eraseBtn" class="btn btn-danger" disabled>Erase Device</button>
+                </div>
+            </div>
+
+            <!-- Progress Display -->
+            <div class="card hidden" id="progressCard">
+                <h2>Update Progress</h2>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span id="progressPercent">0%</span>
+                        <span id="progressStatus">Preparing...</span>
+                    </div>
+                </div>
+                <div class="progress-details">
+                    <div class="progress-step">
+                        <span class="step-number">1</span>
+                        <span class="step-text" id="step1">Bootloader</span>
+                        <span class="step-status" id="status1">⏳</span>
+                    </div>
+                    <div class="progress-step">
+                        <span class="step-number">2</span>
+                        <span class="step-text" id="step2">Partitions</span>
+                        <span class="step-status" id="status2">⏳</span>
+                    </div>
+                    <div class="progress-step">
+                        <span class="step-number">3</span>
+                        <span class="step-text" id="step3">Firmware</span>
+                        <span class="step-status" id="status3">⏳</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Console Output -->
+            <div class="card">
+                <div class="console-header" id="consoleHeader">
+                    <h2>Console Log</h2>
+                    <button class="console-toggle" id="consoleToggle">▼</button>
+                </div>
+                <div class="console-content hidden" id="consoleContent">
+                    <div class="console" id="console"></div>
+                    <button id="clearBtn" class="btn btn-secondary">Clear Log</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile App Download -->
+        <div class="qr-section">
+            <div class="card">
+                <h2>Download PickTrack App</h2>
+                <div class="qr-container">
+                    <img id="qrCode" alt="Download PickTrack App QR Code" class="qr-code">
+                    <p class="qr-subtitle">Scan with your phone to download the mobile app</p>
+                    <p class="qr-url" id="qrUrl">Loading...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>PickTrack Web Updater • By Sacred Labs</p>
+            <p class="disclaimer">Only use with official PickTrack devices.</p>
+        </footer>
+    </div>
+</body>
+</html>

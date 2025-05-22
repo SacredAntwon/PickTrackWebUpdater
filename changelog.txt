@@ -1,0 +1,6 @@
+PickTrack Firmware v1.0.0 - Latest Release
+
+🆕 New Features:
+• Implemented a live time display on the app while connected via bluetooth.
+
+This update is recommended for all PickTrack devices to ensure optimal performance and security.
