@@ -22,7 +22,7 @@ class PickTrackUpdater {
                 firmware: 0x10000
             },
             expectedChip: 'ESP32',
-            latestVersion: 'v1.0.1'
+            latestVersion: 'v1.0.2'
         };
 
         // Mobile app download URL
