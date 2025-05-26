@@ -22,11 +22,11 @@ class PickTrackUpdater {
                 firmware: 0x10000
             },
             expectedChip: 'ESP32',
-            latestVersion: 'v1.0.2'
+            latestVersion: 'Device-v1.0.3 • App-v1.1.0'
         };
 
         // Mobile app download URL
-        this.appDownloadUrl = 'https://expo.dev/accounts/sacredantwon/projects/picktrack/builds/898043e1-f1c5-4a7c-9255-c681b7287222';
+        this.appDownloadUrl = 'https://expo.dev/accounts/sacredantwon/projects/picktrack/builds/acf16f1e-6150-4e00-97df-99122dcdeefe';
         
         this.initializeUI();
         this.setupEventListeners();

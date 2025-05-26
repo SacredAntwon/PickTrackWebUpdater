@@ -1,9 +1,29 @@
-PickTrack Firmware v1.0.2 - Latest Release
+PickTrack Device v1.0.3 - Latest Release
+
+🔒 DEVICE FIRMWARE UPDATES
 
 🆕 New Features:
-• Implemented a live time display on the app while connected via bluetooth.
+• Added adjustable countdown timer length setting in device settings menu for single-player mode.
+
+PickTrack App v1.1.0 - Latest Release (Scan QR or Use Link)
+
+📱 APP UPDATES
+
+🆕 New Features:
+• Implemented countdown sound effects on the live timer with speaker icon for mute/unmute control.
+• Introduced comprehensive Statistics dashboard in the History tab with three distinct views:
+  - Overview: Key metrics including total picks, best time, average time, recent average (configurable), consistency score, and improvement tracking
+  - Trends: Interactive line chart with color-coded performance indicators
+  - Lock Details: Individual statistics for each named lock with sortable data (picks, name, best time, average time)
+• Added countdown time setting in Settings tab to remotely adjust device countdown duration.
 
 🔧 Fixes:
-• When returning back to main menu in the timer it resets the time on the app.
+• Resolved username textbox focus issue that previously caused unwanted screen displacement in Settings.
 
-This update is recommended for all PickTrack devices to ensure optimal performance and security.
+📊 Statistics Features:
+• Consistency Score: Calculated using standard deviation to measure timing consistency (0-100% scale)
+• Improvement Score: Progress tracking by comparing performance between older and newer picks
+• Lock-specific analytics with comprehensive sorting and filtering options
+• Visual trend analysis with configurable time ranges and color-coded performance indicators
+
+This update is recommended for PickTrack devices and app to ensure optimal performance.
