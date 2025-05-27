@@ -5,7 +5,7 @@ PickTrack Device v1.0.3 - Latest Release
 🆕 New Features:
 • Added adjustable countdown timer length setting in device settings menu for single-player mode.
 
-PickTrack App v1.1.0 - Latest Release (Scan QR or Use Link)
+PickTrack App v1.1.1 - Latest Release (Scan QR or Use Link)
 
 📱 APP UPDATES
 
@@ -19,6 +19,7 @@ PickTrack App v1.1.0 - Latest Release (Scan QR or Use Link)
 
 🔧 Fixes:
 • Resolved username textbox focus issue that previously caused unwanted screen displacement in Settings.
+• Changed the audio due to android not reading the previous sounds correctly
 
 📊 Statistics Features:
 • Consistency Score: Calculated using standard deviation to measure timing consistency (0-100% scale)
