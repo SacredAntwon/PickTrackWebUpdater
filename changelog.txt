@@ -1,24 +1,36 @@
-PickTrack Device v1.0.3 - Latest Release
+PickTrack Device v1.0.4 - Latest Release
 
 🔒 DEVICE FIRMWARE UPDATES
 
 🆕 New Features:
-• Added adjustable countdown timer length setting in device settings menu for single-player mode.
+• Added adjustable countdown timer length setting in device settings menu for single-player mode
 
-PickTrack App v1.1.1 - Latest Release (Scan QR or Use Link)
+⚙️ Changes:
+• Heartbeat messages to help with bluetooth connection
+• In the Timer, Running Time, Final Time and Paused time use 0:00.00, 00:00.00 or 000:00.00 format. Countdown still uses 0.00 or 00.00
+• In the Timer, changed from sending time every second to every tenth of a second (10 times more) over bluetooth connection
+
+PickTrack App v1.1.2 - Latest Release (Scan QR or Use Link)
 
 📱 APP UPDATES
 
 🆕 New Features:
+• Implemented bluetooth reconnection with the last connected device upon opening the app
 • Implemented countdown sound effects on the live timer with speaker icon for mute/unmute control.
 • Introduced comprehensive Statistics dashboard in the History tab with three distinct views:
   - Overview: Key metrics including total picks, best time, average time, recent average (configurable), consistency score, and improvement tracking
   - Trends: Interactive line chart with color-coded performance indicators
   - Lock Details: Individual statistics for each named lock with sortable data (picks, name, best time, average time)
-• Added countdown time setting in Settings tab to remotely adjust device countdown duration.
+• Added countdown time setting in Settings tab to remotely adjust device countdown duration
+
+⚙️ Changes:
+• Heartbeat messages to help with bluetooth connection
+• In the Homepage, it uses exact time from the PickTrack to display instead of simulating it
+• In the Homepage, Countdown uses 0, Running Timer uses 0:00, 00:00 or 000:00, Final Time and Paused time use 0:00.00, 00:00.00 or 000:00.00 format
 
 🔧 Fixes:
-• Resolved username textbox focus issue that previously caused unwanted screen displacement in Settings.
+• Error in Trends Tabs relating to the Pick Details list.
+• Resolved username textbox focus issue that previously caused unwanted screen displacement in Settings
 • Changed the audio due to android not reading the previous sounds correctly
 
 📊 Statistics Features:
